@@ -69,7 +69,7 @@ function finishGame() {
 
 function createRanadomCicrcle(){
     const circle = document.createElement('div')
-    const size = getRandomNumber(20, 60)
+    const size = getRandomNumber(10, 100)
     const {width, height} = board.getBoundingClientRect()
     //console.log(qqq)
     const x = getRandomNumber(0, width - size)
@@ -90,4 +90,15 @@ function getRandomNumber(min, max) {
 
 function getColor(element) {
     return colors[Math.floor(Math.random() * colors.length)]
+ }
+
+ function winTheGame() {
+        function kill() {
+            const circle =  document.querySelector('.circle')
+            if (circle){
+                
+                circle.click()
+            }
+        }
+        setInterval(kill, 105)
  }
